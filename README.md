@@ -32,7 +32,7 @@ The game's canvas will include a modal for selecting the user's conditions. User
 
 Gameplay controls will include Start, Pause, Restart, and Reset buttons.
 
-# WIREFRAME HERE
+![](https://raw.githubusercontent.com/DrAmaze/object_permanence/master/app/assets/images/object_permanence_wireframe.png)
 
 ### Architecture and Technology
 
