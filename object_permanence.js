@@ -1,6 +1,9 @@
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 
+// physics
+const friction = 0.9;
+
 // user object stats
 var userObjectRadius = 10;
 var x = canvas.width/2;
@@ -8,8 +11,8 @@ var y = canvas.height/2;
 var velX = 0;
 var velY = 0;
 var maxSpeed = 1000;
-var dx = 3;
-var dy = -3;
+var dx = 1;
+var dy = -1;
 
 // enemy object stats
 var enemyObjectRadius = 5;
@@ -75,51 +78,102 @@ function draw() {
 
   // user object logic
 
-  if ( rightPressed && upPressed
-    && (x + userObjectRadius < canvas.width)
-    && (y > userObjectRadius) ){
-    x += dx * (Math.sqrt(2) / 2);
-    y += dy * (Math.sqrt(2) / 2);
-  } else if ( rightPressed && downPressed
-    && (x + userObjectRadius < canvas.width)
-    && (y + userObjectRadius < canvas.height)) {
-    x += dx * (Math.sqrt(2) / 2);
-    y -= dy * (Math.sqrt(2) / 2);
-  } else if ( leftPressed && downPressed
-    && (x  > userObjectRadius)
-    && (y + userObjectRadius < canvas.height) ) {
-    x -= dx * (Math.sqrt(2) / 2);
-    y -= dy * (Math.sqrt(2) / 2);
-  } else if (leftPressed && upPressed
-    && (x  > userObjectRadius)
-    && (y  > userObjectRadius)) {
-    x -= dx * (Math.sqrt(2) / 2);
-    y += dy * (Math.sqrt(2) / 2);
-  } else if (rightPressed && x + userObjectRadius < canvas.width) {
-    if (Math.sqrt((Math.pow(velX+.5, 2) + Math.pow(velY, 2))) < maxSpeed) {
-      velX += 1;
+  if (rightPressed && upPressed) {
+    velX += dx * (Math.sqrt(2) / 2);
+    velY += dy * (Math.sqrt(2) / 2);
+  } else if (rightPressed && downPressed) {
+    velX += dx * (Math.sqrt(2) / 2);
+    velY -= dy * (Math.sqrt(2) / 2);
+  } else if (leftPressed && downPressed) {
+    velX -= dx * (Math.sqrt(2) / 2);
+    velY -= dy * (Math.sqrt(2) / 2);
+  } else if (leftPressed && upPressed) {
+    velX -= dx * (Math.sqrt(2) / 2);
+    velY += dy * (Math.sqrt(2) / 2);
+  } else if (rightPressed) {
+    velX += dx;
+    if (velY < dy/2 && velY > dy/(-2)) {
+      velY = 0;
+    } else if (velY < 0) {
+      velY -= dy/2;
+    } else if (velY > 0) {
+      velY += dy/2;
     }
-  } else if (leftPressed && x  > userObjectRadius) {
-    if (Math.sqrt((Math.pow(velX-.5, 2) + Math.pow(velY, 2))) < maxSpeed) {
-      velX -= 1;
+  } else if (leftPressed) {
+    velX -= dx;
+    if (velY < dy/2 && velY > dy/(-2)) {
+      velY = 0;
+    } else if (velY < 0) {
+      velY -= dy/2;
+    } else if (velY > 0) {
+      velY += dy/2;
     }
-  } else if (upPressed && y  > userObjectRadius) {
-    if (Math.sqrt((Math.pow(velX, 2) + Math.pow(velY+.5, 2))) < maxSpeed) {
-      velY -= 1;
+  } else if (upPressed) {
+    velY += dy;
+    if (velX < dx/2 && velX > dx/(-2)) {
+      velX = 0;
+    } else if (velX > 0) {
+      velX -= dx/2;
+    } else if (velX < 0) {
+      velX += dx/2;
     }
-  } else if (downPressed && y + userObjectRadius < canvas.height) {
-    if (Math.sqrt((Math.pow(velX, 2) + Math.pow(velY - .5, 2))) < maxSpeed) {
-      velY += 1;
+  } else if (downPressed) {
+    velY -= dy;
+    if (velX < dx/2 && velX > dx/(-2)) {
+      velX = 0;
+    } else if (velX > 0) {
+      velX -= dx/2;
+    } else if (velX < 0) {
+      velX += dx/2;
+    }
+  } else {
+    if (velX > 0 && velY > 0) {
+      velX -= dx/2;
+      velY += dy/2;
+    } else if (velX < 0 && velY < 0) {
+      velX += dx/2;
+      velY -= dy/2;
+    } else if (velX > 0 && velY < 0) {
+      velX -= dx/2;
+      velY -= dy/2;
+    } else if (velX < 0 && velY > 0) {
+      velX += dx/2;
+      velY += dy/2;
+    }
+    if (velX > 0) {
+      velX -= dx/2;
+    } else if (velX < 0) {
+      velX += dx/2;
+    }
+    if (velY < 0) {
+      velY -= dy/2;
+    } else if (velY > 0) {
+      velY += dy/2;
     }
   }
 
-  y += velY;
-  x += velX;
-  if (x + userObjectRadius < canvas.width || x  > userObjectRadius) {
-    velX = 0;
-  } else if ((y  > userObjectRadius) || (y + userObjectRadius < canvas.height)) {
+
+  if (y + velY + userObjectRadius > canvas.height) {
+    y = canvas.height - userObjectRadius;
     velY = 0;
+  } else if (y + velY < userObjectRadius) {
+    y = userObjectRadius;
+    velY = 0;
+  } else {
+    y += velY;
   }
+
+  if (x + velX + userObjectRadius > canvas.width) {
+    x = canvas.width - userObjectRadius;
+    velX = 0;
+  } else if (x + velX < userObjectRadius) {
+    x = userObjectRadius;
+    velX = 0;
+  } else {
+    x += velX;
+  }
+
+
 }
 
 

@@ -16,7 +16,7 @@ Users will have the opportunity to change the initial conditions of the user-con
 ### Functionality & MVP
 
 In Object Permanence, users will be able to:
-- [ ] Move their object using the keyboard
+- [x] Move their object using the keyboard
 - [ ] Modify the following conditions of the game: speed, size, and objects
 - [ ] Have the ability to clear their immediate area of enemies upon colliding the user object with a randomly placed object.
 - [ ] Objects adhere to laws of momentum
@@ -52,12 +52,12 @@ In addition to the webpack entry file, there will be four scripts involved in th
 ### Implementation Timeline
 
 **Over the weekend:**
-- [ ] Study how Markov chain and how to create the application
+- [x] Study how Markov chain and how to create the application
 
 **Monday:**
-- [ ] Render the screen with webpack
-- [ ] Create file to house physics logic.
-- [ ] Have user-controlled object on blank screen (drawn with canvas)
+- [x] Render the screen with webpack
+- [x] Create file to house physics logic.
+- [x] Have user-controlled object on blank screen (drawn with canvas)
 
 **Tuesday:**
 - [ ] Create enemy objects
