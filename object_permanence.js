@@ -5,6 +5,9 @@ var ctx = canvas.getContext("2d");
 var userObjectRadius = 10;
 var x = canvas.width/2;
 var y = canvas.height/2;
+var velX = 0;
+var velY = 0;
+var maxSpeed = 1000;
 var dx = 3;
 var dy = -3;
 
@@ -23,6 +26,8 @@ var keyUnpressed = false;
 
 document.addEventListener("keydown", keyPressedHandler, false);
 document.addEventListener("keyup", keyUnpressedHandler, false);
+
+//key codes: left (37), up (38), right (39), down (40)
 
 function keyPressedHandler(e) {
   if(e.keyCode === 39) {
@@ -91,18 +96,32 @@ function draw() {
     x -= dx * (Math.sqrt(2) / 2);
     y += dy * (Math.sqrt(2) / 2);
   } else if (rightPressed && x + userObjectRadius < canvas.width) {
-    x += dx;
+    if (Math.sqrt((Math.pow(velX+.5, 2) + Math.pow(velY, 2))) < maxSpeed) {
+      velX += 1;
+    }
   } else if (leftPressed && x  > userObjectRadius) {
-    x -= dx;
+    if (Math.sqrt((Math.pow(velX-.5, 2) + Math.pow(velY, 2))) < maxSpeed) {
+      velX -= 1;
+    }
   } else if (upPressed && y  > userObjectRadius) {
-    y += dy;
+    if (Math.sqrt((Math.pow(velX, 2) + Math.pow(velY+.5, 2))) < maxSpeed) {
+      velY -= 1;
+    }
   } else if (downPressed && y + userObjectRadius < canvas.height) {
-    y -= dy;
+    if (Math.sqrt((Math.pow(velX, 2) + Math.pow(velY - .5, 2))) < maxSpeed) {
+      velY += 1;
+    }
   }
 
-
+  y += velY;
+  x += velX;
+  if (x + userObjectRadius < canvas.width || x  > userObjectRadius) {
+    velX = 0;
+  } else if ((y  > userObjectRadius) || (y + userObjectRadius < canvas.height)) {
+    velY = 0;
+  }
 }
 
 
 
-setInterval(draw, 10);
+setInterval(draw, 50);

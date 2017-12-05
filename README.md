@@ -9,7 +9,7 @@ Markov chains are the mathematical construct that govern the instantaneous state
 Users will have the opportunity to change the initial conditions of the user-controlled object and the surrounding obstacles; thus, the Markov matrix that governs the conditions of the game will vary.  The following conditions will be mutable:
 
 * Speed of user
-* Speed of obstacles 
+* Speed of obstacles
 * Size of screen
 * Type of object they control
 
@@ -19,6 +19,7 @@ In Object Permanence, users will be able to:
 - [ ] Move their object using the keyboard
 - [ ] Modify the following conditions of the game: speed, size, and objects
 - [ ] Have the ability to clear their immediate area of enemies upon colliding the user object with a randomly placed object.
+- [ ] Objects adhere to laws of momentum
 - [ ] Start, pause, and restart the game
 
 In addition, this project will include:
