@@ -1,0 +1,33 @@
+{
+  "name": "object_permanence",
+  "version": "1.0.0",
+  "description": "Object Permanence, the game!",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "private": true,
+  "engines": {
+    "node": "6.10.1",
+    "npm": "3.10.10"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "webpack",
+    "webpack": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DrAmaze/object_permanence.git"
+  },
+  "keywords": [],
+  "author": "jacob butler",
+  "homepage": "https://github.com/DrAmaze/object_permanence",
+  "dependencies": {
+    "webpack": "^3.4.1"
+  },
+  "bugs": {
+    "url": "https://github.com/DrAmaze/object_permanence/issues"
+  },
+  "license": "ISC"
+}

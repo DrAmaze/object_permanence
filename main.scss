@@ -4,7 +4,9 @@ body {
 
 canvas {
   background-color: gray;
+  display: flex;
   position: relative;
-  float: right;
+  margin-left: auto;
+  margin-right: auto;
   border: 2px solid blue;
 }
