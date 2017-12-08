@@ -1,0 +1,45 @@
+body {
+  background-color: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+canvas {
+  background-color: lightgray;
+  background-image: url('https://previews.123rf.com/images/veresovich/veresovich1505/veresovich150500205/40753631-Detail-of-stucco-cement-wall-painted-in-a-light-gray-color-Abstract-plaster-texture-background-Stock-Photo.jpg');
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid white;
+  max-height: 600px;
+}
+
+.logo {
+  font-family: 'Vollkorn', serif;
+}
+
+.points-display {
+  background-color: black;
+  color: white;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  padding: 10px 15%;
+  font-family: 'Bungee', cursive;
+  font-size: 40px;
+  width: 15%;
+  text-align: center;
+}
+
+.footer {
+  background-color: rgba(0,0,0,0);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 30px;
+  padding: 5px 10px;
+}
+
+.footer a {
+  color: black;
+  margin: 0 10px;
+}
