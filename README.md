@@ -1,6 +1,6 @@
 # Object Permanence
 
-![](https://dramaze.github.io/object_permanence/)
+[Object Permanence Live](https://dramaze.github.io/object_permanence/)
 
 ### Background and Overview
 
