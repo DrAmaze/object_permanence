@@ -1,21 +1,24 @@
 body {
-  background-color: none;
+  background-image: url('https://thumbs.dreamstime.com/z/subtle-blue-background-2597868.jpg');
   display: flex;
   justify-content: space-between;
+  font-family: 'Vollkorn', serif;
 }
 
 canvas {
-  background-color: lightgray;
-  background-image: url('https://previews.123rf.com/images/veresovich/veresovich1505/veresovich150500205/40753631-Detail-of-stucco-cement-wall-painted-in-a-light-gray-color-Abstract-plaster-texture-background-Stock-Photo.jpg');
+  background-color: black;
+  background-image: url('https://orig00.deviantart.net/bb2c/f/2012/109/e/c/light_gray_windows_8_background_by_gifteddeviant-d4wofjz.png');
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  border: 2px solid white;
+  border: 2px solid #0A1612;
   max-height: 600px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px black;
 }
 
 .logo {
-  font-family: 'Vollkorn', serif;
+  color: #F53240;
 }
 
 .points-display {
@@ -29,6 +32,46 @@ canvas {
   width: 15%;
   text-align: center;
 }
+
+/*.search-modal.expand {
+	max-height: 300px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.06);
+	border-bottom: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+}
+
+.search-modal {
+	width: 100vw;
+  left: calc(-50vw + 50%);
+	max-height: 0;
+	overflow: hidden;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	/*transition: max-height 500ms;*/
+  /*margin-top: -1px;
+}*/
+
+/*.search-modal .input-wrapper {
+	max-width: 40%;
+	min-width: 300px;
+	margin: 25px auto;
+}
+
+.search-modal input {
+	border: 1px solid lightgray;
+	box-shadow: inset 2px 3px 3px rgba(0,0,0,0.07);
+	border-radius: 3px;
+}
+
+.search-modal button {
+	margin-left: 10px;
+	background: white;
+	font-weight: normal;
+	color: gray;
+	border: 1px solid lightgray;
+	border-radius: 3px;
+}*/
 
 .footer {
   background-color: rgba(0,0,0,0);
