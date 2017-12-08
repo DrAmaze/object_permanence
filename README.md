@@ -23,7 +23,7 @@ The design of the game is simple, yet elegant.  It utilizes a canvas of set widt
 
 The instructions and controls of the game are available in a modal that renders upon clicking the "instructions" button.
 
-![](/Users/dramaze/Desktop/appacademy/object_permanence/assets/Screen Shot 2017-12-08 at 10.50.16 AM.png)
+![](https://github.com/DrAmaze/object_permanence/blob/master/assets/Screen%20Shot%202017-12-08%20at%2010.50.16%20AM.png)
 
 ### JavaScript
 
