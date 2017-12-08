@@ -5,6 +5,8 @@ body {
   font-family: 'Vollkorn', serif;
   max-height: 1000px;
   min-width: 1050px;
+  position: relative;
+  object-fit: cover;
 }
 
 canvas {
@@ -17,6 +19,7 @@ canvas {
   max-height: 600px;
   border-radius: 5px;
   box-shadow: 3px 3px 5px black;
+  z-index: -1;
 }
 
 .logo {
@@ -141,11 +144,28 @@ body div {
   left: 10%;
   width: 100%;
   color: #4e4e50;
-  opacity: .5;
   font-style: bold;
   bottom: 200px;
 }
 
+.gg {
+  position: fixed;
+  font-size: 45px;
+  margin-left: 35%;
+  margin-right: 50%;
+  color: #e6e6e6;
+  background-color: #F53240;
+  background-image: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/VphbM00/videoblocks-abstract-red-background-with-floating-particles-seamlessly-loopable-animation_h-x9cme9l_thumbnail-full01.png');
+  box-shadow: 5px 5px 5px darkgray;
+  border: 2px solid lightblue;
+  border-radius: 5px;
+  padding: 100px;
+  left: 5%;
+  z-index: 10000;
+  width: 30%;
+  height: 175px;
+  top: 10%;
+}
 
 .footer {
   background-color: rgba(0,0,0,0);
