@@ -3,10 +3,12 @@ body {
   display: flex;
   justify-content: space-between;
   font-family: 'Vollkorn', serif;
+  max-height: 1000px;
+  min-width: 1050px;
 }
 
 canvas {
-  background-color: black;
+  background-color: lightgray;
   background-image: url('https://orig00.deviantart.net/bb2c/f/2012/109/e/c/light_gray_windows_8_background_by_gifteddeviant-d4wofjz.png');
   position: relative;
   margin-left: auto;
@@ -21,6 +23,9 @@ canvas {
   font-size: 36px;
   text-emphasis: bolder;
   color: #F53240;
+
+  margin-right: 10%;
+  margin-left: 5%;
 }
 
 body div {
@@ -39,11 +44,36 @@ body div {
   width: 15%;
   text-align: center;
   float: right;
-  margin: 5% 20px;
+  margin: 25% 10% 5% 0;
+}
+
+.how-to {
+  text-decoration: none;
+  position: relative;
+  color: black;
+  float: right;
+  padding: 10px;
+  margin-left:10%;
+  margin-right: 10%;
+  font-size: 22px;
+  text-align: center;
+  font-style: italic;
+  border: 2px solid black;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: lightgray;
+  background-image: url('https://orig00.deviantart.net/bb2c/f/2012/109/e/c/light_gray_windows_8_background_by_gifteddeviant-d4wofjz.png');
+}
+
+.how-to:hover {
+  color: lightgray;
+  cursor: pointer;
+  background-color: #e6e6e6;
 }
 
 .how-to-play {
   font-size: 18px;
+  color: #F53240;
 }
 
 .how-to-play p {
@@ -51,6 +81,71 @@ body div {
   font-size: 16px;
   margin-left: 20px;
 }
+
+.controls-header {
+
+  text-align: center;
+}
+
+.spacebar {
+  text-align: center;
+  color: #1a1a1d;
+}
+
+.white_content {
+  display: none;
+  position: absolute;
+  object-fit:cover;
+  top: 15%;
+  left: 25%;
+  width: 50%;
+  height: 65%;
+  padding: 16px;
+  border: 8px solid #F53240;
+  background-color: #e6e6e6;
+  background-image: url('https://ak7.picdn.net/shutterstock/videos/488137/thumb/1.jpg');
+  z-index: 1002;
+  overflow: auto;
+  border-radius: 5px;
+  max-height: 448px;
+}
+
+.instructions {
+  position: relative;
+  top: 40px;
+}
+
+.controls {
+  color: #F53240;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.exit {
+  text-decoration: none;
+  color: black;
+  font-size: 36px;
+}
+
+.exit:hover {
+  color: #F53240;
+  font-size: 40px;
+}
+
+.encouraging-message {
+  position: relative;
+  float: right;
+  left: 10%;
+  width: 100%;
+  color: #4e4e50;
+  opacity: .5;
+  font-style: bold;
+  bottom: 200px;
+}
+
 
 .footer {
   background-color: rgba(0,0,0,0);
@@ -64,4 +159,18 @@ body div {
 .footer a {
   color: black;
   margin: 0 10px;
+}
+
+.screen {
+  display: none;
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 200%;
+  height: 150%;
+  background-color: black;
+  z-index: 1001;
+  -moz-opacity: 0.8;
+  opacity: .95;
+  filter: alpha(opacity=80);
 }

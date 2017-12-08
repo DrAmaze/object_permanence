@@ -12,16 +12,32 @@
     <div>
       <h1 class='logo'> Object Permanence </h1>
 
-      <div class='how-to-play'>
-        <p class='how-to-play'>
-          Matter is permanent. </br>
-          This game illustrates that. </br>
-          Once they are in play, the objects never, ever, EVER leave...</br>
-          <span>(except if you can catch a snitch)</span>
-          </br></br>
-        </p>
-        <h3> Controls </h3>
-        <ul class='instructions'>
+      <div class='points-display' id='points-display'> 0 </div>
+
+      <div class='instructions'>
+        <a href="javascript:void(0)" class='how-to' onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Instructions</a>
+      </div>
+
+
+      <div id="light" class="white_content">
+        <div class='modal-header'>
+          <h1> Object Permanence </h1>
+          <a href="javascript:void(0)" class='exit' onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">
+            X
+          </a>
+        </div>
+        <div class='how-to-play'>
+          <p class='summary'>
+            Matter is permanent. </br>
+            This game illustrates that. </br>
+            Once they are in play, the objects never, ever, EVER leave...</br>
+            <span>(...unless you can catch a snitch)</span><br/>
+            </br>
+            Object movement adheres to the laws of mechanics. YAY!
+          </p>
+        </div>
+        <h2 class='controls-header'> Controls </h2>
+        <ul class='controls'>
           <li>
             Use the arrow keys to move your object around the game.
           </li>
@@ -33,11 +49,18 @@
             ...but be quick! They're tricky...
           </li>
         </ul>
+        <p class='spacebar'>... hit spacebar to begin ... </p>
       </div>
 
-      <div class='points-display' id='points-display'> 0 </div>
+      <div id='encouraging-message' class='encouraging-message'>
+        Hit spacebar to begin the game!
+      </div>
+
+      </div>
+
 
     </div>
+    <div id="fade" class="screen" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"></div>
 
     <div class='footer'>
       <a class='icon'
@@ -54,6 +77,7 @@
 
     <script type="application/javascript" src="lib/bundle.js">
     </script>
+
     <br/>
   </body>
 </html>
