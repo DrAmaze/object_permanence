@@ -1,97 +1,96 @@
 body {
   background-image: url('https://thumbs.dreamstime.com/z/subtle-blue-background-2597868.jpg');
   display: flex;
-  justify-content: space-between;
   font-family: 'Vollkorn', serif;
+  justify-content: space-between;
   max-height: 1000px;
   min-width: 1050px;
-  position: relative;
   object-fit: cover;
+  position: relative;
 }
 
 canvas {
   background-color: lightgray;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
   border: 2px solid #0A1612;
-  max-height: 600px;
   border-radius: 5px;
   box-shadow: 3px 3px 5px black;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 600px;
+  position: relative;
+  top: 8%;
   z-index: -1;
 }
 
-.logo {
-  font-size: 36px;
-  text-emphasis: bolder;
-  color: #F53240;
-
-  margin-right: 10%;
-  margin-left: 5%;
+body div {
+  margin: 0 10px;
+  min-width: 100px;
 }
 
-body div {
-  min-width: 100px;
-  margin: 0 10px;
+.logo {
+  color: #F53240;
+  font-size: 36px;
+  margin-left: 5%;
+  margin-right: 10%;
+  text-emphasis: bolder;
 }
 
 .points-display {
   background-color: black;
-  color: white;
   border: 2px solid lightgray;
   border-radius: 5px;
-  padding: 10px 15%;
+  color: white;
+  float: right;
   font-family: 'Bungee', cursive;
   font-size: 40px;
-  width: 15%;
-  text-align: center;
-  float: right;
   margin: 25% 10% 5% 0;
+  padding: 10px 15%;
+  text-align: center;
+  width: 15%;
 }
 
 .how-to {
-  text-decoration: none;
-  position: relative;
-  color: black;
-  float: right;
-  padding: 10px;
-  margin-left:10%;
-  margin-right: 10%;
-  font-size: 22px;
-  text-align: center;
-  font-style: italic;
-  border: 2px solid black;
-  font-weight: bold;
-  border-radius: 10px;
   background-color: lightgray;
   background-image: url('https://orig00.deviantart.net/bb2c/f/2012/109/e/c/light_gray_windows_8_background_by_gifteddeviant-d4wofjz.png');
+  border: 2px solid black;
+  border-radius: 10px;
+  color: black;
+  float: right;
+  font-style: italic;
+  font-size: 22px;
+  font-weight: bold;
+  margin-left:10%;
+  margin-right: 10%;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
 }
 
 .how-to:hover {
+  background-color: #e6e6e6;
   color: lightgray;
   cursor: pointer;
-  background-color: #e6e6e6;
 }
 
 .how-to-play {
-  font-size: 18px;
   color: #F53240;
+  font-size: 18px;
 }
 
 .how-to-play p {
-  font-style: italic;
   font-size: 16px;
+  font-style: italic;
   margin-left: 20px;
 }
 
 .controls-header {
-
   text-align: center;
 }
 
 .spacebar {
-  text-align: center;
   color: #1a1a1d;
+  text-align: center;
 }
 
 .white_content {
