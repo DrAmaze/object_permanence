@@ -148,31 +148,31 @@ body div {
 }
 
 .gg {
-  position: fixed;
-  font-size: 45px;
-  margin-left: 35%;
-  margin-right: 50%;
-  color: #e6e6e6;
   background-color: #F53240;
   background-image: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/VphbM00/videoblocks-abstract-red-background-with-floating-particles-seamlessly-loopable-animation_h-x9cme9l_thumbnail-full01.png');
-  box-shadow: 5px 5px 5px darkgray;
   border: 2px solid lightblue;
   border-radius: 5px;
-  padding: 100px;
-  left: 5%;
-  z-index: 10000;
-  width: 30%;
+  box-shadow: 5px 5px 5px darkgray;
+  color: #e6e6e6;
+  font-size: 45px;
   height: 175px;
+  margin-left: 35%;
+  margin-right: 50%;
+  left: 5%;
+  padding: 100px;
+  position: fixed;
   top: 10%;
+  width: 30%;
+  z-index: 10000;
 }
 
 .footer {
   background-color: rgba(0,0,0,0);
-  position: fixed;
   bottom: 0;
-  width: 100%;
   font-size: 30px;
   padding: 5px 10px;
+  position: fixed;
+  width: 100%;
 }
 
 .footer a {
@@ -181,15 +181,15 @@ body div {
 }
 
 .screen {
+  -moz-opacity: 0.8;
+  background-color: black;
   display: none;
+  filter: alpha(opacity=80);
+  height: 150%;
+  left: -10%;
+  opacity: .95;
   position: absolute;
   top: -10%;
-  left: -10%;
-  width: 200%;
-  height: 150%;
-  background-color: black;
   z-index: 1001;
-  -moz-opacity: 0.8;
-  opacity: .95;
-  filter: alpha(opacity=80);
+  width: 200%;
 }
