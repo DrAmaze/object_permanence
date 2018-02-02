@@ -1,11 +1,11 @@
 body {
-  background-image: url('https://thumbs.dreamstime.com/z/subtle-blue-background-2597868.jpg');
+  background-image: url('https://static.pexels.com/photos/268415/pexels-photo-268415.jpeg');
   display: flex;
   font-family: 'Vollkorn', serif;
   justify-content: space-between;
   max-height: 1000px;
   min-width: 1050px;
-  object-fit: cover;
+  object-fit: contain;
   position: relative;
 }
 
@@ -95,21 +95,21 @@ body div {
 }
 
 .white_content {
-  display: none;
-  position: absolute;
-  object-fit:cover;
-  top: 15%;
-  left: 25%;
-  width: 50%;
-  height: 65%;
-  padding: 16px;
-  border: 8px solid #F53240;
   background-color: #e6e6e6;
   background-image: url('https://ak7.picdn.net/shutterstock/videos/488137/thumb/1.jpg');
-  z-index: 1002;
-  overflow: auto;
+  border: 8px solid #F53240;
   border-radius: 5px;
+  display: none;
+  height: 65%;
+  left: 25%;
   max-height: 448px;
+  object-fit:cover;
+  overflow: auto;
+  padding: 16px;
+  position: absolute;
+  top: 15%;
+  width: 50%;
+  z-index: 1002;
 }
 
 .instructions {
@@ -138,13 +138,13 @@ body div {
 }
 
 .encouraging-message {
-  position: relative;
-  float: right;
-  left: 10%;
-  width: 100%;
-  color: #4e4e50;
-  font-style: bold;
   bottom: 200px;
+  color: white;
+  float: right;
+  font-style: bold;
+  left: 10%;
+  position: relative;
+  width: 100%;
 }
 
 .gg {
