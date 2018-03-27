@@ -55,6 +55,7 @@ body div {
   background-image: url('https://orig00.deviantart.net/bb2c/f/2012/109/e/c/light_gray_windows_8_background_by_gifteddeviant-d4wofjz.png');
   border: 2px solid black;
   border-radius: 10px;
+  box-shadow: 2px 2px 3px black;
   color: black;
   float: right;
   font-style: italic;
@@ -72,6 +73,10 @@ body div {
   background-color: #e6e6e6;
   color: lightgray;
   cursor: pointer;
+}
+
+.how-to:active {
+  box-shadow: 1px 1px 1px black;
 }
 
 .how-to-play {
